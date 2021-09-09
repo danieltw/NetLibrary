@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // 變更這些屬性的值即可修改組件的相關
 // 資訊。
 [assembly: AssemblyTitle("Microsoft NET Library")]
-[assembly: AssemblyDescription("Microsoft NET 殼層通用 Dll")]
+[assembly: AssemblyDescription("Microsoft NET 殼層通用 DLL")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft® Corporation")]
 [assembly: AssemblyProduct("Microsoft® .NET Framework Library")]

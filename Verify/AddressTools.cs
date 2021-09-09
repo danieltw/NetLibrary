@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace NetLibrary.Verify
 {
-    public class AddressTools
+    public class TaiwanAddress
     {
         private readonly static string AddressPattern = @"(?<zipcode>(^\\d{5}|^\\d{3})?)(?<city>\\D+?[縣市])(?<region>\\D+?(市區|鎮區|鎮市|[鄉鎮市區]))?(?<village>\\D+?[村里])?(?<neighbor>\\d+[鄰])?(?<road>\\D+?(村路|[路街道段]))?(?<section>\\D?段)?(?<lane>\\d+巷)?(?<alley>\\d+弄)?(?<no>\\d+號?)?(?<seq>-\\d+?(號))?(?<floor>\\d+樓)?(?<room>\\d+室)?(?<others>.+)?";
 

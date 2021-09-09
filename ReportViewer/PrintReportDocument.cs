@@ -8,7 +8,7 @@ using System.Globalization;
 using System.IO;
 using System.Text;
 
-namespace NetLibrary.Tools
+namespace NetLibrary.ReportViewer
 {
     /// <summary>
     /// 報表列印

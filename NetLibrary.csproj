@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Tools\INIParser2.cs" />
     <Compile Include="Verify\AddressTools.cs" />
     <Compile Include="Control\ButtonList.cs">
       <SubType>UserControl</SubType>
@@ -66,12 +67,11 @@
     <Compile Include="Control\ButtonList.Designer.cs">
       <DependentUpon>ButtonList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tools\ClipboardTools.cs" />
     <Compile Include="Tools\FileVersion.cs" />
     <Compile Include="Tools\INIParser.cs" />
     <Compile Include="Tools\IPTools.cs" />
     <Compile Include="Tools\MemoryCacheTool.cs" />
-    <Compile Include="Tools\PrintReportDocument.cs">
+    <Compile Include="ReportViewer\PrintReportDocument.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -21,17 +21,31 @@ namespace NetLibrary.Tools
         /// <returns>版本編號</returns>
         public static string GetFileVersion(string FileName)
         {
-            return _ReadVersion(FileName);
+            try
+            {
+                return _ReadVersion(FileName);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
         }
 
         private static string _ReadVersion(string _FileName)
         {
-            int handle = 0;
-            int size = GetFileVersionInfoSize(_FileName, out handle);
-            if (size == 0) return "";
-            byte[] buffer = new byte[size];
-            if (!GetFileVersionInfo(_FileName, handle, size, buffer)) return "";
-            return string.Format("{0}.{1}.{2}.{3}", ConvertToInt16(buffer[45], buffer[46]), ConvertToInt16(buffer[47], buffer[48]), ConvertToInt16(buffer[49], buffer[50]), ConvertToInt16(buffer[51], buffer[52]));
+            try
+            {
+                int handle = 0;
+                int size = GetFileVersionInfoSize(_FileName, out handle);
+                if (size == 0) return "";
+                byte[] buffer = new byte[size];
+                if (!GetFileVersionInfo(_FileName, handle, size, buffer)) return "";
+                return string.Format("{0}.{1}.{2}.{3}", ConvertToInt16(buffer[45], buffer[46]), ConvertToInt16(buffer[47], buffer[48]), ConvertToInt16(buffer[49], buffer[50]), ConvertToInt16(buffer[51], buffer[52]));
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
         }
 
         private static int ConvertToInt16(byte FirstByte, byte LastByte)
